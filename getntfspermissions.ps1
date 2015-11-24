@@ -105,6 +105,7 @@ function getPerm($rootfolder,$outFile)	 {
 	$a		= 0
 	$sum	= $files.count 
 	$files | % {
+		# Show progress
 		$b = "{0:N0}" -f ($a * 100)
 		Write-Progress -Activity "Working..." -PercentComplete "$b" -CurrentOperation "$b % complete"
 		$a = ($a+1/$sum)
